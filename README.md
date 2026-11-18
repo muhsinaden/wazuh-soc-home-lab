@@ -135,3 +135,29 @@ Through this project, I gained practical experience deploying a SIEM platform, i
 This project was completed as an independent cybersecurity home lab for practical learning and skills development.
 
 **Project classification:** Personal hands-on cybersecurity lab — not commercial SOC employment experience.
+
+## Project Documentation & Evidence
+
+### Incident Investigation Report
+
+[Download the SOC Lab Incident Investigation Report (PDF)](SOC_Lab_Incident_Investigation_Report.pdf)
+
+### Screenshots
+
+The following screenshots document the lab setup, monitoring, and detection activities.
+
+#### 1. Wazuh Dashboard
+![Wazuh Dashboard](01-wazuh-dashboard-overview.jpeg)
+
+#### 2. SOC Security Operations Dashboard
+![SOC Dashboard](02-soc-dashboard-overview.jpeg)
+
+#### 3. PowerShell and File Integrity Monitoring
+![PowerShell and FIM Monitoring](03-powershell-and-fim-monitoring.jpeg)
+
+#### 4. Windows Process Creation Monitoring
+![Process Execution Monitoring](04-process-execution-monitoring.jpeg)
+
+### Custom Detection Rules
+
+[View the Wazuh custom detection rules](rules/local_rules.xml)
