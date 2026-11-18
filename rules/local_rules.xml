@@ -1,0 +1,38 @@
+
+<group name="local,">
+
+  <!-- Rule 100100: Windows Brute-Force Detection -->
+  <rule id="100100" level="10" frequency="5" timeframe="120">
+    <if_matched_sid>60122</if_matched_sid>
+    <description>Possible Windows brute-force activity: 5 failed logins within 2 minutes.</description>
+    <group>windows,authentication_failed,brute_force,</group>
+  </rule>
+
+  <!-- Rule 100200: PowerShell Account Discovery -->
+  <rule id="100200" level="10">
+    <if_sid>91802</if_sid>
+    <field name="win.eventdata.scriptBlockText" type="pcre2">(?i)Get-LocalUser</field>
+    <description>SOC LAB: PowerShell local user account discovery detected</description>
+    <mitre>
+      <id>T1087.001</id>
+    </mitre>
+    <group>windows,powershell,account_discovery,</group>
+  </rule>
+
+  <!-- Rule 100300: Process Creation Test -->
+  <rule id="100300" level="8">
+    <if_sid>67027</if_sid>
+    <field name="win.eventdata.commandLine" type="pcre2">SOC-LAB-4688-TEST</field>
+    <description>SOC LAB: Test command execution detected through Windows process monitoring</description>
+    <group>windows,process_creation,command_execution,</group>
+  </rule>
+
+  <!-- Rule 100400: Safe Malware Indicator Simulation -->
+  <rule id="100400" level="10">
+    <if_sid>67027</if_sid>
+    <field name="win.eventdata.commandLine" type="pcre2">SOC-MALWARE-SIMULATION</field>
+    <description>SOC LAB: Simulated malware indicator detected in process command line</description>
+    <group>windows,malware_simulation,process_creation,</group>
+  </rule>
+
+</group>
