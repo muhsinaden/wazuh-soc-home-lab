@@ -146,17 +146,13 @@ This project was completed as an independent cybersecurity home lab for practica
 
 The following screenshots document the lab setup, monitoring, and detection activities.
 
-#### 1. Wazuh Dashboard
-![Wazuh Dashboard](01-wazuh-dashboard-overview.jpeg)
+![Wazuh Dashboard](screenshots/01-wazuh-dashboard-overview.jpeg)
 
-#### 2. SOC Security Operations Dashboard
-![SOC Dashboard](02-soc-dashboard-overview.jpeg)
+![SOC Dashboard](screenshots/02-soc-dashboard-overview.jpeg)
 
-#### 3. PowerShell and File Integrity Monitoring
-![PowerShell and FIM Monitoring](03-powershell-and-fim-monitoring.jpeg)
+![PowerShell and FIM Monitoring](screenshots/03-powershell-and-fim-monitoring.jpeg)
 
-#### 4. Windows Process Creation Monitoring
-![Process Execution Monitoring](04-process-execution-monitoring.jpeg)
+![Process Execution Monitoring](screenshots/04-process-execution-monitoring.jpeg)
 
 ### Custom Detection Rules
 
